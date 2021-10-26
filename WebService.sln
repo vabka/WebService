@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "IdentityService\IdentityService.csproj", "{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityStorage.Abstractions", "IdentityStorage.Abstractions\IdentityStorage.Abstractions.csproj", "{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{C18155FD-A49E-42B3-802D-807A5789DF39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityStorage", "IdentityStorage", "{EA2A6E44-5F6B-417A-A911-17E1BEED7357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityStorage.InMemory", "IdentityStorage.InMemory\IdentityStorage.InMemory.csproj", "{DB4E398B-85E3-466D-8B09-25D175C73C75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4E398B-85E3-466D-8B09-25D175C73C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4E398B-85E3-466D-8B09-25D175C73C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4E398B-85E3-466D-8B09-25D175C73C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4E398B-85E3-466D-8B09-25D175C73C75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCAC4FE3-5B0A-4855-AF5D-0261D64656C5} = {C18155FD-A49E-42B3-802D-807A5789DF39}
+		{EA2A6E44-5F6B-417A-A911-17E1BEED7357} = {C18155FD-A49E-42B3-802D-807A5789DF39}
+		{F2F2A97C-FCD5-47A2-92FE-0EFC11AB52C5} = {EA2A6E44-5F6B-417A-A911-17E1BEED7357}
+		{DB4E398B-85E3-466D-8B09-25D175C73C75} = {EA2A6E44-5F6B-417A-A911-17E1BEED7357}
+	EndGlobalSection
+EndGlobal
