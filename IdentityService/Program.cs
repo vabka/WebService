@@ -1,31 +1,19 @@
+using System.Text.Json.Serialization;
+using IdentityService.Endpoints;
 using IdentityStorage.InMemory;
-using IdentityStorage.Persisted;
+using IdentityStorage.Persisted.Clients;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IClientRepository, InMemoryClientRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(o =>
+    o.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 var app = builder.Build();
 app.MapSwagger();
 app.UseSwaggerUI();
 
-app.MapGet("/api/v1/clients", async (IClientRepository repo) => await repo.GetAllClients());
-
-app.MapGet("/api/v1/clients/{id}", async (string id, IClientRepository repo) =>
-{
-    try
-    {
-        return Results.Ok(await repo.GetClientById(id));
-    }
-    catch (ClientNotFoundException)
-    {
-        return Results.NotFound();
-    }
-});
-
-app.MapPost("/api/v1/clients", async (ClientRegistrationData registrationData, IClientRepository repo) =>
-        await repo.CreateClient(registrationData));
+app.MapClientEndpoints();
 
 app.Run();

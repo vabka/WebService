@@ -1,4 +1,4 @@
-﻿namespace IdentityStorage.Persisted;
+﻿namespace IdentityStorage.Persisted.Clients;
 
 /// <summary>
 /// Client type discriminated by it's capability to store credentials

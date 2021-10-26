@@ -1,29 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace IdentityStorage.Persisted;
-
-public interface IClientRepository
-{
-    /// <summary>
-    /// Get client by it's unique id
-    /// </summary>
-    /// <param name="clientId"></param>
-    /// <returns></returns>
-    public Task<Client> GetClientById(string clientId);
-    
-    /// <summary>
-    /// Register new client
-    /// </summary>
-    /// <param name="data">data of new client</param>
-    /// <returns>newly registered client</returns>
-    public Task<Client> CreateClient(ClientRegistrationData data);
-
-    /// <summary>
-    /// Get all clients
-    /// </summary>
-    /// <returns></returns>
-    public Task<Client[]> GetAllClients();
-}
+namespace IdentityStorage.Persisted.Clients;
 
 public class ClientNotFoundException : Exception
 {
